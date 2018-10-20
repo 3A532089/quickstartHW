@@ -1,5 +1,6 @@
 <?php
-
+use app\Task;
+use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
