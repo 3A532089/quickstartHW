@@ -1,6 +1,5 @@
 <?php
-use app\Task;
-use Illuminate\Http\Request;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,6 +10,8 @@ use Illuminate\Http\Request;
 | contains the "web" middleware group. Now create something great!
 |
 */
+use app\Task;
+use Illuminate\Http\Request;
 Route::get('/', function () {
     $tasks = Task::orderBy('created_at', 'asc')->get();
 
