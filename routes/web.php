@@ -11,7 +11,7 @@
 |
 */
 Route::get('/', function () {
-    //
+    ruturn view('tasks');
 });
 // 增加新的任務
 Route::post('/task', function (Request $request) {
