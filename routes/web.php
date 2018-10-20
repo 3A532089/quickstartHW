@@ -11,7 +11,9 @@
 |
 */
 Route::get('/', function () {
-    ruturn view('tasks');
+    $tasks = Task::orderBy('created_at', 'asc')->get();
+
+    ruturn view('tasks',['tasks' => $tasks]);
 });
 // 增加新的任務
 Route::post('/task', function (Request $request) {
