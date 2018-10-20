@@ -10,11 +10,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-use app\Task;
+use App\Task;
 use Illuminate\Http\Request;
 Route::get('/', function () {
     $tasks = Task::orderBy('created_at', 'asc')->get();
-
     ruturn view('tasks',['tasks' => $tasks]);
 });
 // 增加新的任務
