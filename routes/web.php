@@ -14,7 +14,7 @@ use App\Task;
 use Illuminate\Http\Request;
 Route::get('/', function () {
     $tasks = Task::orderBy('created_at', 'asc')->get();
-    ruturn view('tasks',['tasks' => $tasks]);
+    return view('tasks',['tasks' => $tasks]);
 });
 // 增加新的任務
 Route::post('/task', function (Request $request) {
